@@ -1,0 +1,114 @@
+.cv__header{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+
+    padding: 10rem 0 10rem 6rem;
+}
+
+.cv__header-content{
+    max-width: 60rem;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    margin-right: 5rem;
+    z-index: 2;
+}
+
+.cv__header-content h1, h2{
+    font-weight: 800;
+}
+
+.cv__header-content h2{
+    margin: 1rem 0;
+    color: var(--color-text);
+}
+
+.cv__header-content ul{
+    margin: 2rem 0;
+    font-size: 20px;
+    color: var(--color-text);
+    line-height: 150%;
+    font-weight: 300;
+}
+
+.cv__header-content_media{
+    bottom: 4rem;
+    width: 210px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cv__header-content_media a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: .2rem solid var(--color-text);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--color-text);
+
+    margin-top: 1rem;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    cursor: pointer;
+}
+.cv__header-content_media a:hover{
+    color: var(--color-bg);
+}
+
+.cv__header-content_media a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--color-text);
+    z-index: -1;
+    transition: .5s;
+}
+
+.cv__header-content_media a:hover::before{
+    width: 100%;
+}
+
+.cv__header-img{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cv__header-img{
+  background: url(../../assets/header.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 550px;
+}
+
+@media screen and (max-width: 550px){
+    .cv__header{
+        flex-direction: column;
+        padding: 7rem 0 3rem 3rem;
+    }
+    .cv__header-content h1{
+        font-size: 52px;
+    }
+    .cv__header-content h2{
+        font-size: 32px;
+    }
+    .cv__header-content ul{
+        font-size: 15px;
+    }
+    .cv__header-img{
+        display: none;
+    }
+}

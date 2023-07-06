@@ -1,0 +1,41 @@
+.cv__education{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    min-height: auto;
+}
+
+.cv__education h1{
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--color-text);
+}
+
+.cv__education-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.cv__education-column{
+    flex: 1 1 40rem;
+}
+
+.cv__education-column h2{
+    margin: 0 0 1.5rem 2rem;
+    color: var(--color-text);
+}
+
+@media screen and (max-width: 550px) {
+    .cv__education h1{
+        font-size: 52px;
+    }
+    .cv__education-row{
+        gap: 2rem;
+    }
+    .cv__education-column h2{
+        font-size: 32px;
+    }
+}

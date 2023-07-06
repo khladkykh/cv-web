@@ -1,0 +1,71 @@
+.cv__about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-blog);
+}
+
+.cv__about h1{
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--color-text);
+}
+.cv__about p{
+    width: 85%;
+    margin-top: 3rem;
+    text-align: center;
+    color: var(--color-text);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 150%;
+}
+
+.cv__about-photo{
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cv__about-photo img{
+    width: 90%;
+    border-radius: 50%;
+    border: .2rem solid var(--color-text);
+
+}
+
+.cv__about-photo_circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid var(--color-blog);
+    border-bottom: .2rem solid var(--color-blog);
+    border-left: .2rem solid var(--color-text);
+    border-right: .2rem solid var(--color-text);
+    animation: aboutSpinner 8s linear infinite;
+}
+
+
+
+@media screen and (max-width: 550px){
+    .cv__about h1{
+        font-size: 52px;
+    }
+    .cv__about p{
+        font-size: 15px;
+    }
+}
+
+@keyframes aboutSpinner {
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

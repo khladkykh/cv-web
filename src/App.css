@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background: var(--color-bg);
+    font-family: var(--font-family);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a{
+    color: unset;
+    text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.gradient__bg{
+    background:-moz-radial-gradient(circle at 3% 25%, rgba(74, 20, 140, 0.4) 0%, rgba(4, 12, 24, 1) 100%);
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-radial-gradient(circle at 3% 25%, rgba(74, 20, 140, 0.4) 0%, rgba(4, 12, 24, 1) 100%);
+
+    /* opera 11.10+ */
+    background:-o-radial-gradient(circle at 3% 25%, rgba(74, 20, 140, 0.4) 0%, rgba(4, 12, 24, 1) 100%);
+
+    /* ie 10+ */
+    background:-ms-radial-gradient(circle at 3% 25%, rgba(74, 20, 140, 0.4) 0%, rgba(4, 12, 24, 1) 100%);
+
+    /* global 92%+ browsers support */
+    background:radial-gradient(circle at 3% 25%, rgba(74, 20, 140, 0.4) 0%, rgba(4, 12, 24, 1) 100%);
+}
+
+.gradient__text {
+    background: var(--gradient-text);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section__padding{
+    padding: 4rem 6rem;
+}
+
+.section__margin{
+    margin: 4rem 6rem;
+}
+
+.main__button{
+  position: relative;
+  display: inline-flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+
+  margin-top: 3rem;
+  height: 100%;
+  padding: 1rem 3rem;
+  border: 4px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #9c27b0 0%, #ff5722 100%);
+  color: #ff5722;
+  
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: inherit;
+  z-index: 1;
+  overflow: hidden;
+
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.main__button:hover{
+  color: var(--color-bg);
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main__button::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--gradient-text);
+  z-index: -1;
+  transition: .5s;
 }
+
+
+.main__button:hover::before{
+  width: 100%;
+}
+
+h1{
+  font-size: 62px;
+}
+
+h2{
+  font-size: 40px;
+}
+h3{
+  font-size: 20px;
+}
+h4{
+  font-size: 16px;
+}
+h5{
+  font-size: 12px;
+}
+
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+
+  @media screen and (max-width: 700px){
+    .section__padding{
+        padding: 4rem;
+    }
+    .section__margin{
+        margin: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 550px){
+    .section__padding{
+        padding: 4rem 2rem;
+    }
+    .section__margin{
+        margin: 4rem 2rem;
+    }
+  }

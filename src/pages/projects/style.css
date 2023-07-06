@@ -1,0 +1,11 @@
+.cv__projects h1{
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--color-text);
+}
+
+@media screen and (max-width: 550px) {
+    .cv__projects h1{
+        font-size: 52px;
+    }
+}
